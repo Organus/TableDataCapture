@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+		
+    	<!--  prod -->
+        <property name="connection.url">jdbc:mysql://*/spread_sheet</property>
+        <property name="connection.username">user</property>
+        <property name="connection.password">password</property>
+        
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="myeclipse.connection.profile">mysql</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="connection.driver_class.autoReconnect">true</property>
+
+		<!-- Times in seconds: 3600s=1hr, 18000=5hr     -->
+		<property name="hibernate.c3p0.min_size">10</property>
+		<property name="hibernate.c3p0.max_size">50</property>
+		<property name="hibernate.c3p0.timeout">1800</property> <!-- seconds -->
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.idle_test_period">30</property> <!-- seconds -->
+		<property name="hibernate.c3p0.acquire_increment">5</property> <!-- 5 -->
+		
+		<!-- Enable Hiberate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Show and print nice SQL on stdout -->
+		<property name="show_sql">false</property>
+		<property name="format_sql">false</property>
+
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/Attachments.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/AttachmentType.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/CellData.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/CellDataHeader.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/DataType.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/ValueData.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/Metadata.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/MetadataHeader.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/RowData.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/SheetConfig.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/SheetData.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/WorkbookFileData.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/WorkbookConfig.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/WorkbookData.hbm.xml" />    
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/SetupInfo.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/SetupUrls.hbm.xml" />
+		<mapping resource="gov/nrel/nbc/spreadsheetadmin/dto/DataFormat.hbm.xml" />
+    </session-factory>
+
+</hibernate-configuration>

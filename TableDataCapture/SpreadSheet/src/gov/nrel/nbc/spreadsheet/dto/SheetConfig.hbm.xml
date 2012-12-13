@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.spreadsheet.dto.SheetConfig" table="sheet_config" lazy="false">
+		
+		<id
+			name="sheet_config_id"
+			column="sheet_config_id" type="long">
+			<generator
+				class="native"/>
+		</id>
+		
+		<property
+			name="sheet_name"
+			column="sheet_name"
+			not-null="true"/>
+		
+		<property
+			name="synonym"
+			column="synonym"
+			not-null="true"/>
+		
+		<property
+			name="hdr_row"
+			column="hdr_row"
+			not-null="false"/>
+		
+		<property
+			name="hdr_col"
+			column="hdr_col"
+			not-null="false"/>
+		
+		<property
+			name="data_row"
+			column="data_row"
+			not-null="false"/>
+		
+		<property
+			name="data_col"
+			column="data_col"
+			not-null="false"/>
+		
+		<property
+			name="meta_start_row"
+			column="meta_start_row"
+			not-null="false"/>
+		
+		<property
+			name="meta_start_col"
+			column="meta_start_col"
+			not-null="false"/>
+		
+		<property
+			name="meta_end_row"
+			column="meta_end_row"
+			not-null="false"/>
+		
+		<property
+			name="meta_end_col"
+			column="meta_end_col"
+			not-null="false"/>
+		
+		<set name="cell_hdrs" table="sheet_config_cell_hdr_join" cascade="all" lazy="false">
+			<key column="sheet_config_id"/>
+			<many-to-many column="cell_hdr_id" class="gov.nrel.nbc.spreadsheet.dto.CellDataHeader"/>
+		</set>
+
+	</class>
+</hibernate-mapping>

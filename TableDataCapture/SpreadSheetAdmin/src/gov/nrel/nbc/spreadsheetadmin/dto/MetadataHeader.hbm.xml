@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.spreadsheetadmin.dto.MetadataHeader" table="meta_data_hdr">
+		
+		<id
+			name="metadata_hdr_id"
+			column="hdr_id">
+			<generator
+				class="increment"/>
+		</id>
+		
+		<property
+			name="name"
+			column="name"
+			not-null="true"
+			unique-key="tag_mname"/>
+		
+		<property
+			name="synonym"
+			column="synonym"
+			not-null="true"
+			unique-key="tag_msyn"/>
+
+		<property
+			name="hdr_order"
+            column="hdr_order"
+			not-null="true"/>
+
+    	<many-to-one name="typeId"
+			class="gov.nrel.nbc.spreadsheetadmin.dto.DataType"
+            column="type_id"
+            not-null="false"/>
+	
+    	<many-to-one name="workbook_config_id"
+			class="gov.nrel.nbc.spreadsheetadmin.dto.WorkbookConfig"
+            column="workbook_config_id"
+            not-null="false"/>
+
+		<property
+			name="internal"
+            column="internal"
+			not-null="true"/>
+
+    	<many-to-one name="data_format"
+			class="gov.nrel.nbc.spreadsheetadmin.dto.DataFormat"
+            column="data_format"
+            not-null="false"
+            lazy="false" />
+
+	</class>
+</hibernate-mapping>

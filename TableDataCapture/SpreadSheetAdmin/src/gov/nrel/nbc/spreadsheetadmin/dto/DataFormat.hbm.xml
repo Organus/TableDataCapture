@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.spreadsheetadmin.dto.DataFormat" table="data_format" lazy="false">
+		
+		<id
+			name="data_format_id"
+			column="data_format_id">
+			<generator
+				class="increment"/>
+		</id>
+		
+		<property
+			name="format"
+			column="format"
+			not-null="true"
+			 lazy="false"/>
+		
+		<property
+			name="description"
+			column="description"
+			not-null="false"
+			 lazy="false"/>
+		
+		<property
+			name="type"
+			column="type"
+			not-null="false"
+			 lazy="false"/>
+		
+	</class>
+</hibernate-mapping>

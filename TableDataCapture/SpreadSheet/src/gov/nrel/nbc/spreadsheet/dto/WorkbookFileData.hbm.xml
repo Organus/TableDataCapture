@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.spreadsheet.dto.WorkbookFileData" table="workbook_file_data" lazy="false">
+		
+		<id
+			name="workbook_file_id"
+			column="workbook_file_id">
+			<generator
+				class="increment"/>
+		</id>
+		
+		<property
+			name="filename"
+			column="filename"
+			not-null="true"/>
+		
+		<property
+			name="path"
+			column="path"
+			not-null="true"/>
+
+	</class>
+</hibernate-mapping>
