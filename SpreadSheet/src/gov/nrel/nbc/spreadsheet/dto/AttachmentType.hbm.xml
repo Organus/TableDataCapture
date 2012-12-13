@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.spreadsheet.dto.AttachmentType" table="attachmentTypes">
+		
+		<id
+			name="type_id"
+			column="type_id">
+			<generator
+				class="increment"/>
+		</id>
+		
+		<property
+			name="ext"
+			column="ext"
+			not-null="true"/>
+		
+	</class>
+</hibernate-mapping>

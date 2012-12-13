@@ -1,0 +1,16 @@
+delete from attachments;
+delete from boolean_data;
+delete from cell_data;
+delete from date_data;
+delete from generic_data;
+delete from long_data;
+delete from meta_data;
+delete from real_data;
+delete from row_data;
+delete from sheet_data;
+delete from string_data;
+delete from workbook_attachments;
+delete from workbook_data;
+delete from workbook_file_data;
+delete from workbook_file_join;
+delete from workbook_sheet_join;

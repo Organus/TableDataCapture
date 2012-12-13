@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: web.xml 1009 2008-12-03 22:15:28Z jalbersh $ -->
+<web-app version="2.4"
+		xmlns="http://java.sun.com/xml/ns/j2ee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+			http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <display-name>Security V1.0 - Build 250 - Built on 2011/03/16 11:19</display-name>
+
+  <!-- Servlets -->
+
+  <servlet>
+    <servlet-name>securityService</servlet-name>
+    <servlet-class>gov.nrel.nbc.security.server.SecurityServiceImpl
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>securityService</servlet-name>
+    <url-pattern>/NBCSecurity/securityService</url-pattern>
+  </servlet-mapping>
+
+   <servlet>
+    <servlet-name>NBCSecurityProxy</servlet-name>
+    <servlet-class>gov.nrel.nbc.security.server.NBCSecurityProxy
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>NBCSecurityProxy</servlet-name>
+    <url-pattern>/NBCSecurity/NBCSecurityProxy</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>showSession</servlet-name>
+    <servlet-class>gov.nrel.nbc.security.server.ShowSession
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>showSession</servlet-name>
+    <url-pattern>/NBCSecurity/showSession</url-pattern>
+  </servlet-mapping>
+
+	<!-- Servlets -->
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>NBCSecurityNewUser.html</welcome-file>
+		<welcome-file>NBCSecurity.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

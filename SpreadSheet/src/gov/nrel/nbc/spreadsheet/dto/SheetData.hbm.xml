@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.spreadsheet.dto.SheetData" table="sheet_data">
+		
+		<id
+			name="sheet_data_id"
+			column="sheet_data_id" type="long">
+			<generator
+				class="native"/>
+		</id>
+		
+    	<many-to-one name="workbook_id"
+			class="gov.nrel.nbc.spreadsheet.dto.WorkbookData"
+            column="workbook_id"
+            lazy="false"
+           	cascade="save-update"
+            not-null="false"/>
+	
+    	<many-to-one name="sheet_config_id"
+			class="gov.nrel.nbc.spreadsheet.dto.SheetConfig"
+            column="sheet_config_id"
+            lazy="false"
+           	cascade="save-update"
+            not-null="false"/>
+	
+	</class>
+</hibernate-mapping>

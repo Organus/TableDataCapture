@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.spreadsheet.dto.WorkbookConfig" table="workbook_config" lazy="false">
+		
+		<id
+			name="workbook_config_id"
+			column="workbook_config_id">
+			<generator
+				class="increment"/>
+		</id>
+		
+		<property
+			name="config_name"
+			column="config_name"
+			not-null="true"
+			 lazy="false"/>
+		
+		<property
+			name="synonym"
+			column="synonym"
+			not-null="true"
+			 lazy="false"/>
+		
+		<set name="workbook_file" table="workbook_file_join" cascade="all" lazy="false">
+			<key column="workbook_config_id"/>
+			<many-to-many column="workbook_file_id" class="gov.nrel.nbc.spreadsheet.dto.WorkbookFileData"/>
+		</set>
+
+		<set name="sheetConfigs" table="workbook_config_sheet_join" cascade="all" lazy="false">
+			<key column="workbook_config_id"/>
+			<many-to-many column="sheet_config_id" class="gov.nrel.nbc.spreadsheet.dto.SheetConfig"/>
+		</set>
+
+	</class>
+</hibernate-mapping>

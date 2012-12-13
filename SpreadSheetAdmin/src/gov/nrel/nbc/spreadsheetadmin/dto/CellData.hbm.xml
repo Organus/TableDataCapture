@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.spreadsheetadmin.dto.CellData" table="cell_data">
+		
+		<id name="cell_data_id" column="cell_data_id">
+			<generator class="increment"/>
+		</id>
+
+    	<many-to-one name="valueId"
+			class="gov.nrel.nbc.spreadsheetadmin.dto.ValueData"
+            column="value_id"
+            not-null="false"/>
+
+    	<many-to-one name="cell_hdr_id"
+			class="gov.nrel.nbc.spreadsheetadmin.dto.CellDataHeader"
+            column="cell_hdr_id"
+            not-null="false"/>
+
+    	<many-to-one name="rowId"
+			class="gov.nrel.nbc.spreadsheetadmin.dto.RowData"
+            column="row_data_id"
+            not-null="false"/>
+
+	
+	</class>
+</hibernate-mapping>

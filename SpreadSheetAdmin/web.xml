@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+    
+  <display-name>Spreadsheet Admin (BETA) V1.0 - Build @buildNum@ - Built on @buildDate@</display-name>
+    
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>SpreadSheetAdmin.html</welcome-file>
+  </welcome-file-list>
+
+  <!-- Spreadsheet Service. -->
+  <servlet>
+    <servlet-name>adminService</servlet-name>
+    <servlet-class>gov.nrel.nbc.spreadsheetadmin.server.AdminServiceImpl
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>adminService</servlet-name>
+    <url-pattern>/spreadsheetadmin/adminService</url-pattern>
+  </servlet-mapping>
+
+  <!-- temp File Uploading Service. -->
+  <servlet>
+    <servlet-name>sampleUploadService</servlet-name>
+    <servlet-class>gov.nrel.nbc.spreadsheetadmin.server.SampleSpreadSheetUploadServiceImpl
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>sampleUploadService</servlet-name>
+    <url-pattern>/spreadsheetadmin/sampleUploadService</url-pattern>
+  </servlet-mapping>
+
+	<jsp-config>
+		<taglib>
+		<taglib-uri>http://java.sun.com/jsp/jstl/core_rt</taglib-uri>
+		<taglib-location>/WEB-INF/tld/c-rt.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>
