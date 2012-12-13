@@ -1,0 +1,2 @@
+serviceClass: gov.nrel.nbc.tracker.client.TrackerService
+path: 0A9DB6DDA61EE1D8877EE220A0854A3D.gwt.rpc

@@ -1,0 +1,3 @@
+# Module tracker
+# RPC service class, partial path of RPC policy file
+gov.nrel.nbc.tracker.client.TrackerService, 0A9DB6DDA61EE1D8877EE220A0854A3D.gwt.rpc

@@ -1,0 +1,5 @@
+#Mon Sep 17 15:17:05 MDT 2012
+eclipse.preferences.version=1
+validator.Checked=war/doc,build.xml,jboss_stuff
+validator.Revalidate=true
+validator.Unchecked=

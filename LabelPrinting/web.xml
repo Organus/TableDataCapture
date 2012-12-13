@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: web.xml 1009 2008-12-03 22:15:28Z jalbersh $ -->
+<web-app version="2.4"
+		xmlns="http://java.sun.com/xml/ns/j2ee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+			http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <display-name>Tracker (BETA) V2.0 - Build @buildNum@ - Built on @buildDate@</display-name>
+
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Tracker.html</welcome-file>
+  </welcome-file-list>
+  
+  <listener>
+    <listener-class>gov.nrel.nbc.labelprinting.server.LabelTableContextListener</listener-class>
+  </listener>
+  
+  <!-- Servlets -->
+
+  <!-- Tracker Service. -->
+  <servlet>
+    <servlet-name>trackerService</servlet-name>
+    <servlet-class>gov.nrel.nbc.labelprinting.server.TrackerServiceImpl
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>trackerService</servlet-name>
+    <url-pattern>/tracker/trackerService</url-pattern>
+  </servlet-mapping>
+
+  <!-- Attachment Uploading Service. -->
+  <servlet>
+    <servlet-name>attachmentUploadService</servlet-name>
+    <servlet-class>gov.nrel.nbc.labelprinting.server.AttachmentFileUploadServiceImpl
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>attachmentUploadService</servlet-name>
+    <url-pattern>/tracker/attachmentUploadService</url-pattern>
+  </servlet-mapping>
+
+  <!-- File Uploading Service. -->
+  <servlet>
+    <servlet-name>clientUploadService</servlet-name>
+    <servlet-class>gov.nrel.nbc.labelprinting.server.TrackerFileUploadServiceImpl
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>clientUploadService</servlet-name>
+    <url-pattern>/tracker/clientUploadService</url-pattern>
+  </servlet-mapping>
+
+  <!-- Excel Downloading Service. -->
+  <servlet>
+    <servlet-name>clientDownloadService</servlet-name>
+    <servlet-class>gov.nrel.nbc.labelprinting.server.ExcelDownloadService
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>clientDownloadService</servlet-name>
+    <url-pattern>/tracker/clientDownloadService</url-pattern>
+  </servlet-mapping>
+
+  <!-- PDF Downloading Service. -->
+  <servlet>
+    <servlet-name>pdfDownloadService</servlet-name>
+    <servlet-class>gov.nrel.nbc.labelprinting.server.PDFDownloadService
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>pdfDownloadService</servlet-name>
+    <url-pattern>/tracker/pdfDownloadService</url-pattern>
+  </servlet-mapping>
+
+  <!-- File Downloading Service. -->
+  <servlet>
+    <servlet-name>fileDownloadService</servlet-name>
+    <servlet-class>gov.nrel.nbc.labelprinting.server.FileDownloadService
+    </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>fileDownloadService</servlet-name>
+    <url-pattern>/tracker/fileDownloadService</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PassImageServlet</servlet-name>
+        <servlet-class>gov.nrel.nbc.security.server.auth.PassImageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PassImageServlet</servlet-name>
+        <url-pattern>/PassImageServlet/*</url-pattern>
+    </servlet-mapping>
+
+	<jsp-config>
+		<taglib>
+		<taglib-uri>http://java.sun.com/jsp/jstl/core_rt</taglib-uri>
+		<taglib-location>/WEB-INF/tld/c-rt.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+ 
+<!--
+	<filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+
+    <filter-mapping>
+      <filter-name>springSecurityFilterChain</filter-name>
+	  <url-pattern>/*</url-pattern>
+    </filter-mapping>
+     
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+  -->
+ </web-app>

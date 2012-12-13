@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.tracker.model.Audit" table="audit" catalog="algae_tracker" >
+		
+		<id name="audit_id" column="audit_id" type="long">
+			<generator class="native"/>
+		</id>
+
+    	<many-to-one name="sample"
+			class="gov.nrel.nbc.tracker.model.Sample"
+            column="id"/>
+
+		<property name="printDate" type="date">
+			<column name="printDate"/>
+		</property>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.tracker.model.Printers" table="printers" catalog="algae_tracker" lazy="false">
+		
+		<id name="id" column="printer_id" type="long">
+			<generator class="native"/>
+		</id>
+
+         <property name="name" type="string">
+            <column name="name" length="50">
+                <comment>
+                	Status name
+                </comment>
+            </column>
+        </property>
+	
+         <property name="remotePrinter" type="string">
+            <column name="remote_printer" length="50">
+                <comment>
+                	remote printer name
+                </comment>
+            </column>
+        </property>
+	
+         <property name="machine" type="string">
+            <column name="machine" length="50">
+                <comment>
+                	Status name
+                </comment>
+            </column>
+        </property>
+	
+         <property name="status" type="boolean">
+            <column name="status">
+             </column>
+        </property>
+	
+	</class>
+</hibernate-mapping>

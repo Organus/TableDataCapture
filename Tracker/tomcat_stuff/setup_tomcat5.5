@@ -1,0 +1,34 @@
+mv /usr/share/apache-tomcat-5.5.28 /usr/share/tomcat5.5
+mkdir /var/lib/tomcat5.5
+rm -R /usr/share/tomcat5.5/logs
+ln -s /var/log/tomcat5.5 logs
+chown -R tomcat55 /var/log/tomcat5.5
+chgrp -R adm /var/log/tomcat5.5
+cp -R /usr/share/tomcat5.5/conf/* /etc/tomcat5.5
+rm -R /usr/share/tomcat5.5/conf
+ln -s /etc/tomcat5.5 /usr/share/tomcat5.5/conf
+chown -R tomcat55 /etc/tomcat5.5
+chgrp -R adm /etc/tomcat5.5
+rm -R /usr/share/tomcat5.5/work
+mkdir /var/cache/tomcat5.5
+ln -s /var/cache/tomcat5.5/work /usr/share/tomcat5.5/work
+ln -s /usr/share/doc/tomcat5.5 /usr/share/tomcat5.5/docs
+cp -R /usr/share/tomcat5.5/shared /var/lib/tomcat5.5
+rm -R /usr/share/tomcat5.5/shared
+ln -s /var/lib/tomcat5.5/shared /usr/share/tomcat5.5/shared
+cp -R /usr/share/tomcat5.5/temp /var/lib/tomcat5.5
+rm -R /usr/share/tomcat5.5/temp
+ln -s /var/lib/tomcat5.5/temp /usr/share/tomcat5.5/temp
+cp -R /usr/share/tomcat5.5/webapps /var/lib/tomcat5.5
+rm -R /usr/share/tomcat5.5/webapps
+ln -s /var/lib/tomcat5.5/webapps /usr/share/tomcat5.5/webapps
+ln -s /usr/local/tomcat5.5 /var/lib/tomcat5.5
+rm /etc/tomcat5.5/tomcat5.5
+chown -R tomcat55 /var/lib/tomcat5.5
+chgrp -R adm /var/lib/tomcat5.5
+chmod -R 777 /var/lib/tomcat5.5
+cp -R /etc/tomcat_stuff/policy.d /etc/tomcat5.5
+cp -R /etc/tomcat_stuff/localhost /etc/tomcat5.5/Catalina
+cp /etc/tomcat_stuff/tomcat-users.xml /etc/tomcat5.5
+cp /etc/tomcat_stuff/tomcat5.5 /etc/init.d/tomcat5.5
+

@@ -1,0 +1,135 @@
+Loading module 'gov.nrel.nbc.tracker.Tracker'
+   Loading inherited module 'com.google.gwt.user.User'
+      Loading inherited module 'com.google.gwt.core.Core'
+         Loading inherited module 'com.google.gwt.dev.jjs.intrinsic.Intrinsic'
+            Loading inherited module 'com.google.gwt.lang.LongLib'
+         Loading inherited module 'com.google.gwt.emul.Emulation'
+      Loading inherited module 'com.google.gwt.event.Event'
+         Loading inherited module 'com.google.gwt.event.EventBase'
+            Loading inherited module 'com.google.gwt.core.Core'
+               Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.event.dom.DomEvent'
+            Loading inherited module 'com.google.gwt.event.EventBase'
+               Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.dom.DOM'
+               Loading inherited module 'com.google.gwt.core.Core'
+                  Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.user.UserAgent'
+                  Loading inherited module 'com.google.gwt.emul.EmulationWithUserAgent'
+                     Loading inherited module 'com.google.gwt.emul.Emulation'
+                        Module 'com.google.gwt.emul.Emulation' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.event.logical.LogicalEvent'
+            Loading inherited module 'com.google.gwt.event.EventBase'
+               Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.animation.Animation'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.User'
+            Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.RemoteService'
+         Loading inherited module 'com.google.gwt.http.HTTP'
+            Loading inherited module 'com.google.gwt.core.Core'
+               Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.DocumentRoot'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.DOM'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.dom.DOM'
+            Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.Window'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.HTTPRequest'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.History'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.i18n.I18N'
+      Loading inherited module 'com.google.gwt.user.Popup'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.Form'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.TextBox'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.Focus'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.ImageBundle'
+         Loading inherited module 'com.google.gwt.user.ClippedImage'
+            Loading inherited module 'com.google.gwt.core.Core'
+               Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.user.UserAgent'
+               Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.ClippedImage'
+         Module 'com.google.gwt.user.ClippedImage' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.RichText'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.SplitPanel'
+         Loading inherited module 'com.google.gwt.user.User'
+            Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.CaptionPanel'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.Window'
+         Module 'com.google.gwt.user.Window' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.Tree'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.Hyperlink'
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.datepicker.DatePicker'
+   Loading inherited module 'com.google.gwt.user.theme.standard.Standard'
+   Public resources found in...
+      Refreshing resources
+         Searching for resources within file:/C:/DevApps/gwt-windows-1.6.4/gwt-user.jar
+            Indexing zip file: C:\DevApps\gwt-windows-1.6.4\gwt-user.jar
+         Searching for resources within file:/C:/DevApps/gwt-windows-1.6.4/gwt-dev-windows.jar
+            Indexing zip file: C:\DevApps\gwt-windows-1.6.4\gwt-dev-windows.jar
+   Translatable source found in...
+      Refreshing resources
+Refreshing module from source
+   Validating newly compiled units
+      Removing units with errors
+      Removing units with errors
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Adding '1' new generated units
+      Validating newly compiled units
+         Removing units with errors
+         Removing units with errors
+Rebinding com.google.gwt.i18n.client.impl.CldrImpl
+   Invoking <generate-with class='com.google.gwt.i18n.rebind.LocalizableGenerator'/>
+      Checking for deprecated metadata

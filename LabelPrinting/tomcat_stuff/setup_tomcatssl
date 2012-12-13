@@ -1,0 +1,46 @@
+cp -R /var/lib/tomcat5.5 /var/lib/tomcatssl
+chown -R tomcat55 /var/lib/tomcatssl
+chgrp -R adm /var/lib/tomcatssl
+cp -R /etc/tomcat5.5 /etc/tomcatssl
+chown tomcat55 /etc/tomcatssl
+chgrp adm /etc/tomcatssl
+cp -R /var/cache/tomcat5.5 /var/cache/tomcatssl
+cp -R /usr/share/tomcat5.5 /usr/share/tomcatssl
+cp /etc/tomcat_stuff/tomcatssl /etc/init.d
+mkdir /var/log/tomcatssl
+chown tomcat55 /var/log/tomcatssl
+chgrp adm /var/log/tomcatssl
+rm /usr/share/tomcatssl/work
+ln -s /var/cache/tomcatssl/work /usr/share/tomcatssl/work
+rm /usr/share/tomcatssl/conf
+ln -s /etc/tomcatssl /usr/share/tomcatssl/conf
+rm /usr/share/tomcatssl/shared
+ln -s /var/lib/tomcatssl/shared /usr/share/tomcatssl/shared
+rm /usr/share/tomcatssl/temp
+ln -s /var/lib/tomcatssl/temp /usr/share/tomcatssl/temp
+rm /usr/share/tomcatssl/webapps
+ln -s /var/lib/tomcatssl/webapps /usr/share/tomcatssl/webapps
+rm /usr/share/tomcatssl/work
+ln -s /var/lib/tomcatssl /usr/share/tomcatssl/work
+rm /usr/share/tomcatssl/logs
+ln -s /var/log/tomcatssl /usr/share/tomcatssl/logs
+cd /usr/share/tomcatssl
+cp -R /usr/share/tomcat5.5/server .
+cd -
+cd /var/lib/tomcatssl
+rm work
+ln -s /var/cache/tomcatssl work
+rm conf
+rm logs
+ln -s /etc/tomcatssl conf
+cp -R /etc/tomcat_stuff/localhost /etc/tomcatssl/Catalina
+cp /etc/tomcat_stuff/tomcat-users.xml /etc/tomcatssl
+ln -s /var/log/tomcatssl logs
+cd -
+cp .keystore /usr/share/tomcatssl
+chown -R tomcat55 /etc/tomcatssl
+chgrp -R adm /etc/tomcatssl
+chmod -R 777 /etc/tomcatssl
+chown -R tomcat55 /var/lib/tomcatssl
+chgrp -R adm /var/lib/tomcatssl
+chmod -R 777 /var/lib/tomcatssl

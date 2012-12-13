@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.tracker.model.Idgen" table="id_gen" catalog="tracker" >
+		
+		<id
+			name="id"
+			column="id"
+			type="long">
+			<generator class="native"/>
+		</id>
+		
+		<property
+			name="type"
+			column="type"
+			type="string"
+			length="10"
+			not-null="true"/>
+		
+		<property
+			name="description"
+			type="string"
+			length="256"
+			column="description"/>
+		
+		<property
+			name="value"
+			type="long"
+			column="value"/>
+	
+	</class>
+</hibernate-mapping>

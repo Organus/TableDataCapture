@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.tracker.model.Strains" table="strains" catalog="tracker" >
+		
+		<id name="id" column="strains_id" type="long">
+			<generator class="native"/>
+		</id>
+
+
+         <property name="name" type="string">
+            <column name="name">
+                <comment>
+                	strain name
+                </comment>
+            </column>
+        </property>
+	
+	</class>
+</hibernate-mapping>

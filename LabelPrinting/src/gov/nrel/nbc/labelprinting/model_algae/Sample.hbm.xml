@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.labelprinting.model.Sample" table="sample" catalog="algae_tracker" >
+		
+		<id name="id" column="id" type="long">
+			<generator class="native"/>
+		</id>
+
+
+         <property name="sampleId" type="string" not-null="false">
+            <column name="sample_id">
+                <comment>
+                	Sample Id
+                </comment>
+            </column>
+        </property>
+
+         <property name="comment" type="string" not-null="false">
+            <column name="comment"/>
+        </property>
+
+         <property name="amount" type="string" not-null="false">
+            <column name="amount" length="8">
+                <comment>
+                	Magnitude
+                </comment>
+            </column>
+        </property>
+
+    	<many-to-one name="units"
+			class="gov.nrel.nbc.labelprinting.model.AmountUnits"
+            column="amount_units_id"
+            cascade="save-update"
+             not-null="false"/>
+
+         <property name="externalId" type="string" not-null="false">
+            <column name="external_id" length="255">
+                <comment>
+                	ID from outside of system.
+                </comment>
+            </column>
+        </property>
+
+        <property name="ownerName" type="string" not-null="false">
+            <column name="owner_name"/>
+        </property>
+		
+        <property name="custodianName" type="string" not-null="false">
+            <column name="custodian_name"/>
+        </property>
+		
+		<property name="createDate" type="date" not-null="false">
+			<column name="create_date"/>
+		</property>
+		
+		<property name="modifyDate" type="date" not-null="false">
+			<column name="mod_date"/>
+		</property>
+
+    	<many-to-one name="treatment"
+			class="gov.nrel.nbc.labelprinting.model.Treatments"
+            column="treatments_id"
+            cascade="save-update"
+             not-null="false"/>
+
+    	<many-to-one name="feedstock"
+			class="gov.nrel.nbc.labelprinting.model.Feedstocks"
+            column="feedstocks_id"
+            cascade="save-update"
+             not-null="false"/>
+
+    	<many-to-one name="fraction"
+			class="gov.nrel.nbc.labelprinting.model.Fractions"
+            column="fractions_id"
+            cascade="save-update"
+             not-null="false"/>
+
+    	<many-to-one name="status"
+			class="gov.nrel.nbc.labelprinting.model.Status"
+            column="status_id"
+            not-null="false"
+            cascade="save-update"/>
+
+    	<many-to-one name="location"
+			class="gov.nrel.nbc.labelprinting.model.Location"
+            column="location_id"
+            cascade="save-update"
+             not-null="false"/>
+
+        <property name="trbNum" type="int" not-null="false">
+            <column name="trb_num" length="32"/>
+        </property>
+		
+        <property name="trbPage" type="int" not-null="false">
+            <column name="trb_page" length="32"/>
+        </property>
+		
+         <property name="printed" type="boolean" not-null="false">
+            <column name="printed">
+             </column>
+        </property>
+
+         <property name="storageNotes" type="string" not-null="false">
+            <column name="storage_notes">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+         <property name="fire" type="string" not-null="false">
+            <column name="fire" length="2" >
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+         <property name="reactivity" type="string" not-null="false">
+            <column name="reactivity">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+         <property name="health" type="string" not-null="false">
+            <column name="health" length="2">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+         <property name="specificHazard" type="string" not-null="false">
+            <column name="specific_hazard" length="5">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+    	<many-to-one name="origin"
+			class="gov.nrel.nbc.labelprinting.model.Origins"
+            column="origin"
+            lazy="false"
+            not-null="false"
+            cascade="save-update"/>
+
+         <property name="description" type="string" not-null="false">
+            <column name="description">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+         <property name="biomassLot" type="string" not-null="false">
+            <column name="biomass_lot">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+    	<many-to-one name="form"
+			class="gov.nrel.nbc.labelprinting.model.Forms"
+            column="form"
+            lazy="false"
+            not-null="false"
+            cascade="save-update"/>
+
+    	<many-to-one name="strain"
+			class="gov.nrel.nbc.labelprinting.model.Strains"
+            column="strain"
+            lazy="false"
+            not-null="false"
+            cascade="save-update"/>
+
+    	<many-to-one name="destination"
+			class="gov.nrel.nbc.labelprinting.model.Destinations"
+            column="destination"
+            lazy="false"
+            not-null="false"
+            cascade="save-update"/>
+
+    	<many-to-one name="composition"
+			class="gov.nrel.nbc.labelprinting.model.Composition"
+            column="composition"
+            lazy="false"
+            not-null="false"
+            cascade="save-update"/>
+
+		<set name="attachments" table="sample_attachment" cascade="all" lazy="false" >
+			<key column="tracking_id"/>
+			<many-to-many column="attachment_id" class="gov.nrel.nbc.labelprinting.model.Attachments"/>
+		</set>
+
+	</class>
+</hibernate-mapping>

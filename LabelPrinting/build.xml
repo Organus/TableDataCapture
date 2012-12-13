@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Label Printing" default="deploy" basedir=".">
+
+	<!-- Set dev.os -->
+	<condition property="dev.os" value="mac">
+		<os family="mac" />
+	</condition>
+	<condition property="dev.os" value="linux">
+		<os family="unix" />
+	</condition>
+	<condition property="dev.os" value="windows">
+		<os family="windows" />
+	</condition>
+
+	<!-- Include external property values -->
+	<property file="build.properties" />
+
+	<path id="project.classpath">
+		<pathelement location="${gwt.real.home}/gwt-user.jar" />
+		<pathelement location="${gwt.real.home}/gwt-dev.jar" />
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${build.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${junit.home}">
+			<include name="junit-4.6.jar" />
+		</fileset>
+	</path>
+
+	<patternset id="meta.files">
+		<include name="**/*.xml" />
+		<include name="**/*.properties" />
+	</patternset>
+
+	<path id="toolslib">
+		<pathelement location="${gwt.real.home}/gwt-user.jar" />
+		<pathelement location="${gwt.real.home}/gwt-dev.jar" />
+		<pathelement location="${lib.dir}/*.jar" />
+		<pathelement location="${src.dir}" />
+		<pathelement location="${build.dir}" />
+	</path>
+
+	<path id="toolslib2">
+		<pathelement location="${gwt.real.home}/gwt-user.jar" />
+		<pathelement location="${gwt.real.home}/gwt-dev.jar" />
+		<pathelement location="${src.dir}" />
+		<pathelement location="${build.dir}" />
+		<pathelement location="${build.classes}" />
+	</path>
+	
+	  <property name="libs" refid="toolslib"/>
+	  <property name="libs2" refid="toolslib2"/>
+
+	<taskdef name="hibernatetool"
+		classname="org.hibernate.tool.ant.HibernateToolTask"
+		classpathref="project.classpath" />
+
+	<target name="schemaexport" depends="compile, copymetafiles" description="Exports a generated schema to file and db.">
+		<hibernatetool destdir="${basedir}">
+			<classpath>
+				<path location="${build.dir}" />
+				<path location="${build.classes}" />
+			</classpath>
+			<configuration configurationfile="${build.classes}/hibernate.cfg.xml" />
+			<hbm2ddl export="false" drop="false" outputfilename="tracker.sql" delimiter=";" format="true" />
+		</hibernatetool>
+	</target>
+
+	<!-- Clean up and prepare -->
+	<target name="clean">
+		<delete dir="${build.classes}" />
+		<delete dir="${build.dir}/labelprinting" />
+		<delete file="*.war" />
+		<mkdir dir="${build.classes}" />
+	</target>
+
+	<!-- Compile GWT source -->
+	<target name="compile-gwt">
+		<java failonerror="true" classname="com.google.gwt.dev.Compiler" fork="true">
+			<jvmarg value="-Xms128m" />
+			<jvmarg value="-Xmx512m" />
+			<classpath refid="toolslib2" />
+			<arg value="${gwt.module.LabelPrinting}" />
+		</java>
+	</target>
+
+	<!-- Compile Java source -->
+	<target name="compile" depends="compile-gwt">
+		<javac srcdir="${src.dir}" destdir="${build.classes}" debug="${javac.debug}" deprecation="on">
+			<classpath refid="project.classpath" />
+		</javac>
+	</target>
+
+	<!-- Compile Java test source -->
+	<target name="compile-test">
+		<javac srcdir="${test.dir}" destdir="${build.classes}" debug="${javac.debug}" deprecation="on">
+			<classpath refid="project.classpath" />
+		</javac>
+	</target>
+
+	<!-- copy metadata to build classpath -->
+	<target name="copymetafiles">
+		<copy todir="${build.classes}">
+			<fileset dir="${src.dir}">
+				<patternset refid="meta.files" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="tests">
+	    <path id="tests.classpath">
+	        <pathelement path="${build.classes}"/>
+		</path>  
+		<junit printsummary="on"
+           haltonfailure="true"
+           fork="false"
+           failureproperty="tests.failed"
+           showoutput="false">
+			<formatter type="plain" usefile="true"/>
+			<sysproperty key="id" value="${id}"/>
+			<sysproperty key="workingdir" value="${build.classes}"/>
+			<classpath refid="tests.classpath"/>
+			<classpath refid="project.classpath"/>
+		</junit>
+	</target>
+
+    <target name="versionInfo">
+        <propertyfile
+            file="version.properties" comment="Build version info">
+            <entry key="buildDate" type="date" value="now"/>
+            <entry key="buildNum" default="0" type="int" operation="+" value="1"/>
+        </propertyfile>
+        <copy file="TitlePanel.java" tofile="${src.dir}/gov/nrel/nbc/labelprinting/client/TitlePanel.java" overwrite="true" />
+        <replace
+            file="${src.dir}/gov/nrel/nbc/labelprinting/client/TitlePanel.java"
+            value="value not found in version.properties"
+            propertyFile="version.properties">
+            <replacefilter
+                token="@buildDate@"
+                property="buildDate"/>
+            <replacefilter
+                token="@buildNum@"
+                property="buildNum"/>
+        </replace>
+        <copy file="web.xml" tofile="${build.web}/web.xml" overwrite="true" />
+        <replace
+            file="${build.web}/web.xml"
+            value="value not found in version.properties"
+            propertyFile="version.properties">
+            <replacefilter
+                token="@buildDate@"
+                property="buildDate"/>
+            <replacefilter
+                token="@buildNum@"
+                property="buildNum"/>
+        </replace>
+    </target>
+
+    <target name="algae-versionInfo">
+        <propertyfile
+            file="version.properties" comment="Build version info">
+            <entry key="buildDate" type="date" value="now"/>
+            <entry key="buildNum" default="0" type="int" operation="+" value="1"/>
+        </propertyfile>
+        <copy file="TitlePanel.java" tofile="${src.dir}/gov/nrel/nbc/labelprinting/client/TitlePanel.java" overwrite="true" />
+        <replace
+            file="${src.dir}/gov/nrel/nbc/labelprinting/client/TitlePanel.java"
+            value="value not found in version.properties"
+            propertyFile="version.properties">
+            <replacefilter
+                token="@buildDate@"
+                property="buildDate"/>
+            <replacefilter
+                token="@buildNum@"
+                property="buildNum"/>
+        </replace>
+        <copy file="algae-web.xml" tofile="${build.web}/web.xml" overwrite="true" />
+        <replace
+            file="${build.web}/web.xml"
+            value="value not found in version.properties"
+            propertyFile="version.properties">
+            <replacefilter
+                token="@buildDate@"
+                property="buildDate"/>
+            <replacefilter
+                token="@buildNum@"
+                property="buildNum"/>
+        </replace>
+    </target>
+
+	<!-- package code for deployment -->
+	<target name="deploy" depends="clean, copymetafiles, versionInfo, compile"> <!-- remove tests dependency to not run prior to deploying --> 
+		<war destfile="label_printing.war" webxml="${build.web}/web.xml">
+			  <fileset dir="${build.dir}" >
+	   			<exclude name="**/my-login-config.xml.xml" />
+	   			<exclude name="**/META-INF/jboss-service.xml" />
+	      	    <exclude name="**/security/**/*" /> 
+	      	    <exclude name="**/doc/**/*" /> 
+	      	    <exclude name="**/test/**/*" /> 
+			  </fileset>
+		</war>
+		<!--
+		<war destfile="tracker.sar" webxml="${build.web}/web.xml">
+		      <fileset dir="${basedir}">
+				    <include name="tracker.war" />
+		    	    <include name="myjaas.jar" />
+	   			    <exclude name="**/WEB-INF/*" />
+			  </fileset>
+			  <fileset dir="${build.dir}" >
+			    	<include name="my-login-config.xml" />
+			   		<include name="**/META-INF/jboss-service.xml" />
+   			        <exclude name="**/WEB-INF/*" />
+			  </fileset>
+		</war>
+		<delete file="C:/Documents and Settings/jalbersh.NREL_NT/My Documents/Downloads/jboss-5.1.0.GA-jdk6/jboss-5.1.0.GA/server/default/deploy/tracker.sar"/>
+        <copy file="tracker.sar" tofile="C:/Documents and Settings/jalbersh.NREL_NT/My Documents/Downloads/jboss-5.1.0.GA-jdk6/jboss-5.1.0.GA/server/default/deploy/tracker.sar" overwrite="true" />
+		<unzip src="tracker.war" dest="C:/Documents and Settings/jalbersh.NREL_NT/My Documents/Downloads/jboss-5.1.0.GA-jdk6/jboss-5.1.0.GA/server/default/deploy/tracker.sar/tracker.war" overwrite="true">
+		    <patternset>
+		        <exclude name="**/security"/>
+		        <exclude name="**/security/**/*"/>
+		    </patternset>
+		</unzip>
+        <copy file="tracker.war" tofile="C:/Documents and Settings/jalbersh.NREL_NT/My Documents/Downloads/jboss-5.1.0.GA/jboss-5.1.0.GA/server/default/deploy/tracker.war" overwrite="true" />
+       -->
+	</target>
+
+	<!-- package code for deployment -->
+	<target name="deploy-algae" depends="clean, copymetafiles, algae-versionInfo, compile"> <!-- remove tests dependency to not run prior to deploying --> 
+		<war destfile="algae-tracker.war" webxml="${build.web}/web.xml">
+			  <fileset dir="${build.dir}" >
+	   			<exclude name="**/my-login-config.xml.xml" />
+	   			<exclude name="**/META-INF/jboss-service.xml" />
+	      	    <exclude name="**/security/**/*" /> 
+	      	    <exclude name="**/doc/**/*" /> 
+	      	    <exclude name="**/test/**/*" /> 
+			  </fileset>
+		</war>
+	</target>
+
+	<!--   <fileset file="tracker.jar"/>  -->
+	<!-- package code for deployment -->
+	<target name="tracker.jar" >
+	    <zip destfile="tracker.jar" encoding="UTF8" whenempty="create">
+			  <fileset dir="${build.web}/classes" >
+	      	    <!--<exclude name="**/test/**/*" />--> 
+			  </fileset>
+	    </zip>
+        <copy file="tracker.jar" tofile="${basedir}/../NBCSecurity/lib/tracker.jar" overwrite="true" />
+	</target>
+
+	<!--   <fileset file="tracker.code.jar"/>  -->
+	<!-- package code for deployment -->
+	<target name="jarcode" >
+		<delete file="tracker.code.jar" />
+	    <zip destfile="tracker.code.jar" encoding="UTF8" whenempty="create">
+		        <fileset dir="${build.classes}"/>
+			    <fileset dir="${basedir}">
+					<include name="**/*.java" />
+					<include name="**/*.xml" />
+					<include name="**/*.html" />
+					<include name="**/*.properties" />
+					<include name="**/*.css" />
+					<include name="**/*.jpg" />
+					<include name="**/*.JPG" />
+					<include name="**/*.gif" />
+					<include name="**/*.sql" />
+					<include name="**/*.jar" />
+					<include name="**/*.jsp" />
+				<include name="**/*.classpath" />
+					<include name="**/*.project" />
+				</fileset>
+	    </zip>
+	</target>
+
+	<!-- javadoc -->
+	<target name="javadoc">
+		<!-- Create the directory -->
+		<mkdir dir="${build.docs.dir}" />
+		<javadoc packagenames="${src.dir}/**.*"
+				destdir="${build.docs.dir}"
+				author="true" version="true" Private="true" SplitIndex="true"
+				Windowtitle="${ant.project.name} API Javadocs" linksource="yes"
+				additionalparam="-breakiterator ">
+			<fileset dir="${src.dir}">
+				<include name="**/*.java" />
+			</fileset>
+			<classpath refid="project.classpath" />
+		</javadoc>
+	</target>
+</project>

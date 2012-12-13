@@ -1,0 +1,8 @@
+/etc/init.d/tomcatssl stop
+rm -Rf /var/lib/tomcatssl
+rm -Rf /etc/tomcatssl
+rm -Rf /var/cache/tomcatssl
+rm -Rf /usr/share/tomcatssl
+rm -Rf /etc/init.d/tomcatssl
+rm -Rf /var/log/tomcatssl
+rm -Rf /etc/tomcatssl/tomcatssl

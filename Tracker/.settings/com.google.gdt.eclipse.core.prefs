@@ -1,0 +1,6 @@
+#Thu Jan 05 16:25:15 MST 2012
+eclipse.preferences.version=1
+jarsExcludedFromWebInfLib=C\:/packages/commons-logging-1.0.4/commons-logging.jar|C\:/packages/junit4.6/junit-4.6.jar
+launchConfigExternalUrlPrefix=
+warSrcDir=war
+warSrcDirIsOutput=true

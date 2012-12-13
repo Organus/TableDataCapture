@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/hibernate
+END
+TrbSessionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/hibernate/TrbSessionFactory.java
+END
+HibernateSessionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/hibernate/HibernateSessionFactory.java
+END

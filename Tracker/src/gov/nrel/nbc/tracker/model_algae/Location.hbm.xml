@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.tracker.model.Location" table="location" catalog="algae_tracker" >
+		
+		<id name="id" column="location_id" type="long">
+			<generator class="native"/>
+		</id>
+
+         <property name="building" type="string">
+            <column name="building">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+         <property name="room" type="string">
+            <column name="room">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+         <property name="subLocation" type="string">
+            <column name="sublocation">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+         <property name="shelf" type="string">
+            <column name="shelf">
+                <comment>
+                </comment>
+            </column>
+        </property>
+	
+         <property name="holder" type="string">
+            <column name="holder">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+         <property name="packaging" type="string">
+            <column name="packaging">
+                <comment>
+                </comment>
+            </column>
+        </property>
+
+	</class>
+</hibernate-mapping>

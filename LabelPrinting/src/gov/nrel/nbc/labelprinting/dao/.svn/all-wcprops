@@ -1,0 +1,269 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao
+END
+AttachmentsDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/AttachmentsDAOHibernate.java
+END
+CustodiansDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/CustodiansDAO.java
+END
+OriginsDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/OriginsDAOHibernate.java
+END
+SampleDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/SampleDAOHibernate.java
+END
+CompositionsDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/CompositionsDAOHibernate.java
+END
+CompositionsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/CompositionsDAO.java
+END
+CalcSheetDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/CalcSheetDAO.java
+END
+CustodiansDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/CustodiansDAOHibernate.java
+END
+OriginsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/OriginsDAO.java
+END
+TrbDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/TrbDAOHibernate.java
+END
+StrainsDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/StrainsDAOHibernate.java
+END
+AttachmentTypeDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/AttachmentTypeDAOHibernate.java
+END
+IdgenDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/IdgenDAO.java
+END
+FeedstocksDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/FeedstocksDAOHibernate.java
+END
+TreatmentsDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/TreatmentsDAOHibernate.java
+END
+GenericDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/GenericDAO.java
+END
+PrintersDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/PrintersDAO.java
+END
+AuditDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/AuditDAO.java
+END
+AmountUnitsDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/AmountUnitsDAOHibernate.java
+END
+LocationDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/LocationDAOHibernate.java
+END
+StrainsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/StrainsDAO.java
+END
+FractionsDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/FractionsDAOHibernate.java
+END
+FormsDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/FormsDAOHibernate.java
+END
+TrbDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/TrbDAO.java
+END
+DestinationsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/DestinationsDAO.java
+END
+CalcSheetHibernateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/CalcSheetHibernateDAO.java
+END
+SampleDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/SampleDAO.java
+END
+DestinationsDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/DestinationsDAOHibernate.java
+END
+FormsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/FormsDAO.java
+END
+AttachmentsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/AttachmentsDAO.java
+END
+FractionsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/FractionsDAO.java
+END
+StatusDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/StatusDAO.java
+END
+LocationDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/LocationDAO.java
+END
+AmountUnitsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/AmountUnitsDAO.java
+END
+AuditDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/AuditDAOHibernate.java
+END
+SourcesDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/SourcesDAO.java
+END
+PrintersDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/PrintersDAOHibernate.java
+END
+SourcesDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/SourcesDAOHibernate.java
+END
+FeedstocksDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/FeedstocksDAO.java
+END
+GenericHibernateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/GenericHibernateDAO.java
+END
+TreatmentsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/TreatmentsDAO.java
+END
+AttachmentTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/AttachmentTypeDAO.java
+END
+IdgenDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/IdgenDAOHibernate.java
+END
+StatusDAOHibernate.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/dao/StatusDAOHibernate.java
+END

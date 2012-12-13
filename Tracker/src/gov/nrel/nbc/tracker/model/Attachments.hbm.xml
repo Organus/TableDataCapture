@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="gov.nrel.nbc.tracker.model.Attachments" table="attachments" catalog="tracker">
+		
+		<id
+			name="attachment_id"
+			column="attachment_id">
+			<generator
+				class="increment"/>
+		</id>
+		
+		<property
+			name="path"
+			column="path"
+			not-null="true"/>
+	
+		<property
+			name="filename"
+			column="filename"
+			not-null="true"/>
+		
+    	<many-to-one name="type_id"
+			class="gov.nrel.nbc.tracker.model.AttachmentType"
+            column="type_id"
+            not-null="false"/>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model
+END
+Attachments.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Attachments.java
+END
+Status.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Status.hbm.xml
+END
+Origins.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Origins.java
+END
+Location.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Location.hbm.xml
+END
+AmountUnits.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/AmountUnits.hbm.xml
+END
+Composition.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Composition.java
+END
+Sources.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Sources.hbm.xml
+END
+Sample.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Sample.java
+END
+Feedstocks.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Feedstocks.hbm.xml
+END
+Treatments.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Treatments.hbm.xml
+END
+Custodians.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Custodians.java
+END
+AttachmentType.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/AttachmentType.hbm.xml
+END
+Trb.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Trb.java
+END
+Strains.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Strains.java
+END
+Custodians.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Custodians.hbm.xml
+END
+AttachmentType.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/AttachmentType.java
+END
+Treatments.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Treatments.java
+END
+Feedstocks.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Feedstocks.java
+END
+AmountUnits.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/AmountUnits.java
+END
+Location.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Location.java
+END
+Origins.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Origins.hbm.xml
+END
+Fractions.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Fractions.java
+END
+CalcSSFile.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/CalcSSFile.hbm.xml
+END
+Forms.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Forms.java
+END
+Idgen.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Idgen.hbm.xml
+END
+Printers.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Printers.hbm.xml
+END
+Audit.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Audit.hbm.xml
+END
+Destinations.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Destinations.java
+END
+Strains.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Strains.hbm.xml
+END
+Trb.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Trb.hbm.xml
+END
+Destinations.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Destinations.hbm.xml
+END
+Audit.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Audit.java
+END
+Printers.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Printers.java
+END
+Sample.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Sample.hbm.xml
+END
+Sources.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Sources.java
+END
+Composition.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Composition.hbm.xml
+END
+Idgen.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Idgen.java
+END
+Forms.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Forms.hbm.xml
+END
+Attachments.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Attachments.hbm.xml
+END
+Status.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Status.java
+END
+CalcSSFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3375/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/CalcSSFile.java
+END
+Fractions.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3377/LabelPrinting/src/gov/nrel/nbc/labelprinting/model/Fractions.hbm.xml
+END
